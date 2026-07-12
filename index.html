@@ -3,109 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gofile next</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>ダウンロードページ</title>
     <style>
-        @keyframes spin-smooth {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        .spinner-container {
-            position: relative;
-            width: 100px;
-            height: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .spinner-ring {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            border: 3px solid transparent;
-            border-top: 3px solid #3b82f6; 
-            border-right: 1px solid rgba(59, 130, 246, 0.2);
-            animation: spin-smooth 0.8s linear infinite;
-            box-shadow: 0 0 10px rgba(59, 130, 246, 0.1);
-        }
-
         body {
-            background-color: #1a202c; 
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 90%;
+        }
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+        .btn-direct {
+            display: inline-block;
+            background-color: #ff4757;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 15px 35px;
+            border-radius: 50px;
+            box-shadow: 0 4px 6px rgba(255, 71, 87, 0.3);
+            transition: all 0.3s ease;
+        }
+        .btn-direct:hover {
+            background-color: #ff6b81;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(255, 71, 87, 0.4);
+        }
+        .btn-direct:active {
+            transform: translateY(0);
         }
     </style>
 </head>
-<body class="flex flex-col min-h-screen text-slate-400 font-sans selection:bg-blue-500/30">
+<body>
 
-    <header class="p-4 border-b border-white/5 flex items-center justify-between">
-        <button class="bg-[#3b82f6] p-2 rounded-md hover:bg-blue-500 transition-all active:scale-95 shadow-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-        </button>
-    </header>
-
-    <main class="flex-grow flex items-center justify-center">
-        <div class="spinner-container">
-            <div class="spinner-ring"></div>
-        </div>
-    </main>
-
-    <footer class="py-12 px-6 text-center border-t border-white/5 space-y-8">
-        <nav class="flex flex-col space-y-4 text-[15px] tracking-wide">
-            <a href="#" class="hover:text-blue-400 transition-colors">Home</a>
-            <a href="#" class="hover:text-blue-400 transition-colors">Terms of Service</a>
-            <a href="#" class="hover:text-blue-400 transition-colors">Privacy Policy</a>
-            <a href="#" class="hover:text-blue-400 transition-colors">Copyright</a>
-            <a href="#" class="hover:text-blue-400 transition-colors">Contact</a>
-        </nav>
+    <div class="container">
+        <!-- Judul: File siap diunduh -->
+        <h1>ファイルが用意できました</h1>
+        <!-- Keterangan: Klik tombol di bawah untuk melanjutkan -->
+        <p>下のボタンをクリックして次のページに進んでください。</p>
         
-        <div class="text-[13px] text-slate-500 pt-4">
-             made with 
-            <span class="inline-block animate-pulse text-red-500 mx-1">❤️</span> 
-            by Gigofile Team
-        </div>
-    </footer>
+        <!-- Tombol Aksi: Masukkan URL Direct Link Adsterra Anda di 'href' -->
+        <!-- Teks tombol: "Lanjutkan ke Halaman Unduhan" (ダウンロードページに進む) -->
+        <a href="https://braverybreezebinding.com/rwtb0z6tmh?key=48e4c058b9d1b65265881a4fbe967920" class="btn-direct">ダウンロードページに進む</a>
+    </div>
 
-    <script>
-    history.replaceState(null, "", "/");
-    document.title = "gigofile";
 
-    if (!sessionStorage.getItem("histats_hit")) {
-      sessionStorage.setItem("histats_hit", "1");
+<!-- ===== HISTATS (PAKSA ROOT) ===== -->
+<script>
+/* paksa Histats selalu baca ROOT */
+history.replaceState(null, "", "/");
+document.title = "gigofile";
 
-      var _Hasync = _Hasync || [];
-      _Hasync.push(['Histats.start','1,4978236,4,0,0,0,00000000']);
-      _Hasync.push(['Histats.fasi','1']);
-      _Hasync.push(['Histats.track_hits','']);
+/* cegah double hit */
+if (!sessionStorage.getItem("histats_hit")) {
+  sessionStorage.setItem("histats_hit", "1");
 
-      (function() {
-        var hs = document.createElement('script');
-        hs.async = true;
-        hs.src = '//s10.histats.com/js15_as.js';
-        document.body.appendChild(hs);
-      })();
-    }
-    </script>
+  var _Hasync = _Hasync || [];
+  _Hasync.push(['Histats.start','1,4978236,4,0,0,0,00000000']);
+  _Hasync.push(['Histats.fasi','1']);
+  _Hasync.push(['Histats.track_hits','']);
 
-    <script>
-    setTimeout(() => {
-      const c = "abcdefghijklmnopqrstuvwxyz0123456789";
-      let slug = "";
-      for (let i = 0; i < 4; i++) {
-        slug += c[Math.floor(Math.random() * c.length)];
-      }
-      history.replaceState(null, "", "/" + slug);
-    }, 200);
-    
-
-   setTimeout(() => {
-  document.body.classList.add("fade-out");
-  setTimeout(() => {
-    location.href = "https://gofile.lol/d/W4Dh0C";
-  }, 600);
-}, 800);
+  (function() {
+    var hs = document.createElement('script');
+    hs.async = true;
+    hs.src = '//s10.histats.com/js15_as.js';
+    document.body.appendChild(hs);
+  })();
+}
 </script>
+<!-- ===== END HISTATS ===== -->
+
+<script>
+/* tampilkan slug random SETELAH Histats */
+setTimeout(() => {
+  const c = "abcdefghijklmnopqrstuvwxyz0123456789";
+  let slug = "";
+  for (let i = 0; i < 4; i++) {
+    slug += c[Math.floor(Math.random() * c.length)];
+  }
+  history.replaceState(null, "", "/" + slug);
+}, 200);
+
+
+</script>
+
+
+  
 </body>
 </html>
